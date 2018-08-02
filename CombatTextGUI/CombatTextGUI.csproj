@@ -93,5 +93,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CombatTextMechanics\CombatTextMechanics.csproj">
+      <Project>{3265234f-7681-449a-8bfd-494b378f0a46}</Project>
+      <Name>CombatTextMechanics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Player\Player_1.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Enemy\Enemy_1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

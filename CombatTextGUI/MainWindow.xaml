@@ -5,8 +5,141 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CombatTextGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Combat Text Game" 
+        Width="1280" Height="980" 
+        Background="LightGray"
+        WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Window.Resources>
+    
     <Grid>
-        
+        <DockPanel LastChildFill="False">
+
+            <Button Content="Exit" 
+                    DockPanel.Dock="Bottom" 
+                    Height="30" Width="100" 
+                    HorizontalAlignment="Right" 
+                    Margin="5" 
+                    FontSize="16" 
+                    FontWeight="Bold"
+                    Click="ExitButton_Click" />
+
+            <StackPanel Width="210" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Left" DockPanel.Dock="Left">
+                <Image HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="5" 
+                   Loaded="PlayerImage_Loaded" />
+
+                <Label Content="Name" Loaded="PlayerNameLabel_Loaded" />
+                <Label Content="Level" />
+                <Label Content="Experience" />
+                <Label Content="Health" />
+                <Label Content="Mana" />
+
+                <Separator Width="180" />
+
+                <Label Content="Strength" Loaded="PlayerStrengthLabel_Loaded" />
+                <Label Content="Intelligence" Loaded="PlayerIntelligenceLabel_Loaded" />
+                <Label Content="Vitality" Loaded="PlayerVitalityLabel_Loaded" />
+                <Label Content="Speed" Loaded="PlayerSpeedLabel_Loaded" />
+
+                <Separator Width="180" />
+
+                <Label Content="Base damage" />
+                <Label Content="Physical damage" />
+                <Label Content="Magic power" />
+                <Label Content="Critical chance" />
+                <Label Content="Critical damage" />
+                <Label Content="Number of attacks" />
+                <Label Content="Initiation" />
+
+                <Separator Width="180" />
+
+                <Label Content="Defense" />
+                <Label Content="Armor" />
+                <Label Content="Fire resistance" />
+                <Label Content="Water resistance" />
+                <Label Content="Air resistance" />
+                <Label Content="Earth resistance" />
+            </StackPanel>
+
+            <StackPanel Width="210" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Left" DockPanel.Dock="Right">
+                <Image HorizontalAlignment="Right" 
+                   VerticalAlignment="Top" 
+                   Margin="5" 
+                   Loaded="EnemyImage_Loaded" />
+
+                <Label Content="Name" Loaded="EnemyNameLabel_Loaded" />
+                <Label Content="Level: 20" />
+                <Label Content="No. of kills: 0" />
+                <Label Content="Health: ???" />
+                <Label Content="Mana: ???" />
+
+                <Separator Width="180" />
+
+                <Label Content="Strength: ???" />
+                <Label Content="Intelligence: ???" />
+                <Label Content="Vitality: ???" />
+                <Label Content="Speed: ???" />
+
+                <Separator Width="180" />
+
+                <Label Content="Base damage: ???" />
+                <Label Content="Physical damage: ???" />
+                <Label Content="Magic power: ???" />
+                <Label Content="Critical chance: ???" />
+                <Label Content="Critical damage: ???" />
+                <Label Content="Number of attacks: ???" />
+                <Label Content="Initiation: ???" />
+
+                <Separator Width="180" />
+
+                <Label Content="Defense: ???" />
+                <Label Content="Armor: ???" />
+                <Label Content="Fire resistance: ???" />
+                <Label Content="Water resistance: ???" />
+                <Label Content="Air resistance: ???" />
+                <Label Content="Earth resistance: ???" />
+
+            </StackPanel>
+
+            <Label Content="Combat Text" 
+                   FontSize="20" FontWeight="Bold" DockPanel.Dock="Top"
+                   HorizontalAlignment="Center" />
+
+            <TextBox DockPanel.Dock="Top" 
+                     Name="CombatTextBox"
+                     Height="700"
+                     Margin="5" 
+                     TextWrapping="Wrap"
+                     IsReadOnly="True"
+                     VerticalScrollBarVisibility="Visible"
+                     VerticalContentAlignment="Top" 
+                     FontSize="14" />
+            
+            <Button DockPanel.Dock="Top" 
+                    Content="Attack" 
+                    Height="33"
+                    VerticalAlignment="Bottom" 
+                    Margin="5" 
+                    Width="100" 
+                    FontSize="16" 
+                    FontWeight="Bold" 
+                    Click="AttackButton_Click" />
+            
+            <Button DockPanel.Dock="Top" 
+                    Content="Defend" 
+                    Height="33"
+                    VerticalAlignment="Bottom" 
+                    Margin="5" 
+                    Width="100" 
+                    FontSize="16" 
+                    FontWeight="Bold" 
+                    Click="DefendButton_Click" />
+
+        </DockPanel>
     </Grid>
 </Window>
