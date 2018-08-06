@@ -1,9 +1,4 @@
 ﻿using CombatTextModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CombatTextMechanics
 {
@@ -19,6 +14,11 @@ namespace CombatTextMechanics
         public int PlayerIntelligence()
         {
             return actor.Intelligence;
+        }
+
+        public int PlayerDexterity()
+        {
+            return actor.Dexterity;
         }
 
         public int PlayerVitality()
