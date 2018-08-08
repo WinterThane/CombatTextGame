@@ -10,7 +10,7 @@ namespace CombatTextMechanics
     {
         public string PlayerAttack()
         {
-            return "Attack! ... Proper text will be displayed here";
+            return "Attack! ... Proper text will be displayed here\n----------";
         }
     }
 }

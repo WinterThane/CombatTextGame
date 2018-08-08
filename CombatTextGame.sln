@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatTextGUI", "CombatText
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatTextMechanics", "CombatTextMechanics\CombatTextMechanics.csproj", "{3265234F-7681-449A-8BFD-494B378F0A46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatTextModels", "CombatTextModels\CombatTextModels.csproj", "{F50A9046-C241-4642-BBC1-9F61C8054A82}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatTextTests", "CombatTextTests\CombatTextTests.csproj", "{701FF628-FF94-4228-8AA6-9146726BE859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatTextModels", "CombatTextModels\CombatTextModels.csproj", "{13AF88A3-6626-4728-B06A-EC3323BC70AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{3265234F-7681-449A-8BFD-494B378F0A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3265234F-7681-449A-8BFD-494B378F0A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3265234F-7681-449A-8BFD-494B378F0A46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F50A9046-C241-4642-BBC1-9F61C8054A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F50A9046-C241-4642-BBC1-9F61C8054A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F50A9046-C241-4642-BBC1-9F61C8054A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F50A9046-C241-4642-BBC1-9F61C8054A82}.Release|Any CPU.Build.0 = Release|Any CPU
 		{701FF628-FF94-4228-8AA6-9146726BE859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{701FF628-FF94-4228-8AA6-9146726BE859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{701FF628-FF94-4228-8AA6-9146726BE859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{701FF628-FF94-4228-8AA6-9146726BE859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13AF88A3-6626-4728-B06A-EC3323BC70AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13AF88A3-6626-4728-B06A-EC3323BC70AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13AF88A3-6626-4728-B06A-EC3323BC70AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13AF88A3-6626-4728-B06A-EC3323BC70AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

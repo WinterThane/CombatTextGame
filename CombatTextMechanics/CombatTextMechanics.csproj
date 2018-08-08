@@ -45,8 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\CombatTextModels\CombatTextModels.csproj">
-      <Project>{f50a9046-c241-4642-bbc1-9f61c8054a82}</Project>
+      <Project>{13af88a3-6626-4728-b06a-ec3323bc70ab}</Project>
       <Name>CombatTextModels</Name>
     </ProjectReference>
   </ItemGroup>

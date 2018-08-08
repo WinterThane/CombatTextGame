@@ -12,16 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CombatTextMechanics;
 
 namespace CombatTextGUI
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for Inventory.xaml
+    /// </summary>
+    public partial class Inventory : Page
     {
-        public MainWindow()
+        public Inventory()
         {
             InitializeComponent();
-            Main.Content = new MainMenu();
         }
     }
 }
