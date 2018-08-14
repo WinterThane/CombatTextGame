@@ -89,10 +89,11 @@
                     <RowDefinition MinHeight="50" />
                     <RowDefinition MinHeight="50" />
                 </Grid.RowDefinitions>
-                <Button Content="Walk North" Grid.Row="0" Grid.Column="1" Margin="3" Click="NorthButton_Click" />
-                <Button Content="Walk West" Grid.Row="1" Grid.Column="0" Margin="3" Click="WestButton_Click" />
-                <Button Content="Walk East" Grid.Row="1" Grid.Column="2" Margin="3" Click="EastButton_Click" />
-                <Button Content="Walk South" Grid.Row="2" Grid.Column="1" Margin="3" Click="SouthButton_Click" />
+                <Button Content="&#x1f845;  Walk North  &#x1f845;" Grid.Row="0" Grid.Column="1" Margin="3" Click="NorthButton_Click" />
+                <Button Content="&#x1f844;  Walk West" Grid.Row="1" Grid.Column="0" Margin="3" Click="WestButton_Click" />
+                <Button Content="&#x1F525;  Rest  &#x1F525;" Grid.Row="1" Grid.Column="1" Margin="3" Width="130" Height="30" FontWeight="Bold" />
+                <Button Content="Walk East  &#x1f846;" Grid.Row="1" Grid.Column="2" Margin="3" Click="EastButton_Click" />
+                <Button Content="&#x1f847;  Walk South  &#x1f847;" Grid.Row="2" Grid.Column="1" Margin="3" Click="SouthButton_Click" />
             </Grid>
 
         </DockPanel>

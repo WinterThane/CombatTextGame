@@ -19,8 +19,18 @@
             <Setter Property="TextAlignment" Value="Center" />
             <Setter Property="FontSize" Value="16" />
         </Style>
+        <Style x:Key="HeroNameTextBox" TargetType="TextBox">
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
         <Style x:Key="ClassesComboBox" TargetType="ComboBox">
-            <Setter Property="Width" Value="250" />
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
         </Style>
         <Style x:Key="AttributesPlusMinus" TargetType="Button">
             <Setter Property="FontWeight" Value="Bold" />
@@ -31,7 +41,7 @@
             <Setter Property="Height" Value="25" />
         </Style>
     </Page.Resources>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -43,25 +53,38 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Button Content="1" Grid.Row="0" Grid.Column="0" />
         
-        <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-            <TextBlock Text="Choose a class:" />
-            <Grid>
-                <ComboBox Name="CharacterClassesCB" 
-                          SelectionChanged="CharacterClassesCB_SelectionChanged" 
-                          Style="{StaticResource ClassesComboBox}" />
-                <TextBlock IsHitTestVisible="False" Name="SelectClassText" 
-                           Foreground="Gray" Text="-- Select Class --" 
-                           HorizontalAlignment="Center" Margin="0, 2, 0, 0" />
-            </Grid>
-            
-        </StackPanel>
+        <Button Content="Choose your portrait:" Grid.Row="0" Grid.Column="0" />
 
-        <StackPanel Grid.Row="0" Grid.Column="2">
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Hero name:" HorizontalContentAlignment="Right" />
+            <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource HeroNameTextBox}" />
+
+            <Label Grid.Row="2" Grid.Column="0" Content="Choose a class:" HorizontalContentAlignment="Right" />
+            <Grid Grid.Row="2" Grid.Column="1">
+                <ComboBox Name="CharacterClassesCB" 
+                            SelectionChanged="CharacterClassesCB_SelectionChanged" 
+                            Style="{StaticResource ClassesComboBox}" />
+                <TextBlock IsHitTestVisible="False" Name="SelectClassText" 
+                            Foreground="Gray" Text="-- Select Class --" 
+                            Margin="25, 3, 0, 0" />
+            </Grid>
+        </Grid>
+
+            <StackPanel Grid.Row="0" Grid.Column="2">
             <Grid Margin="0, 5, 30, 0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="200" />
                     <ColumnDefinition Width="30" />
                     <ColumnDefinition Width="50" />
                     <ColumnDefinition Width="30" />
@@ -75,15 +98,13 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBlock Text="Attributes" 
-                           Grid.Row="0" Grid.Column="0" 
-                           Style="{StaticResource AttributesText}" 
-                           HorizontalAlignment="Center" />
-                <TextBlock Name="StrengthTB" Text="Strength" Grid.Row="1" Grid.Column="0" Style="{StaticResource AttributesText}" />
-                <TextBlock Text="IntelligenceTB" Grid.Row="2" Grid.Column="0" Style="{StaticResource AttributesText}" />
-                <TextBlock Text="DexterityTB" Grid.Row="3" Grid.Column="0" Style="{StaticResource AttributesText}" />
-                <TextBlock Text="VitalityTB" Grid.Row="4" Grid.Column="0" Style="{StaticResource AttributesText}" />
-                <TextBlock Text="SpeedTB" Grid.Row="5" Grid.Column="0" Style="{StaticResource AttributesText}" />
+                <TextBlock Text="Attributes" Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center"
+                           FontWeight="Bold" FontSize="20" />
+                <TextBlock Text="Strength" Grid.Row="1" Grid.Column="0" Style="{StaticResource AttributesText}" />
+                <TextBlock Text="Intelligence" Grid.Row="2" Grid.Column="0" Style="{StaticResource AttributesText}" />
+                <TextBlock Text="Dexterity" Grid.Row="3" Grid.Column="0" Style="{StaticResource AttributesText}" />
+                <TextBlock Text="Vitality" Grid.Row="4" Grid.Column="0" Style="{StaticResource AttributesText}" />
+                <TextBlock Text="Speed" Grid.Row="5" Grid.Column="0" Style="{StaticResource AttributesText}" />
 
                 <Button Content="+" Grid.Row="1" Grid.Column="1" Margin="3" 
                         Style="{StaticResource AttributesPlusMinus}" Click="PlusStrengthButton_Click" />
@@ -120,11 +141,10 @@
             </Grid>
         </StackPanel>
         
-        <Button Content="4" Grid.Row="1" Grid.Column="0" />
-        <Button Content="5" Grid.Row="1" Grid.Column="1" />
-        <Button Content="6" Grid.Row="1" Grid.Column="2" />
-        <Button Content="7" Grid.Row="2" Grid.Column="0" />
-        <Button Content="8" Grid.Row="2" Grid.Column="1" />
-        <Button Content="9" Grid.Row="2" Grid.Column="2" />
+        <Button Content="art and exit button" Grid.Row="1" Grid.RowSpan="2" />
+        <Button Content="combat stats" Grid.Row="1" Grid.Column="1" />
+        <Button Content="resists" Grid.Row="1" Grid.Column="2" />
+        <Button Content="class flavor text" Grid.Row="2" Grid.Column="1" />
+        <Button Content="class specific skill and create button" Grid.Row="2" Grid.Column="2" />
     </Grid>
 </Page>

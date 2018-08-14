@@ -142,7 +142,8 @@ namespace CombatTextGUI
 
         private void FleeButton_Click(object sender, RoutedEventArgs e)
         {
-            CombatTextBox.Text += "Flee from combat! ... Proper text will be displayed here\n";
+            var nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("Travel.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }
