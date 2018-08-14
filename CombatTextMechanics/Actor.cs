@@ -1,4 +1,4 @@
-﻿namespace CombatTextModels
+﻿namespace CombatTextMechanics
 {
     public class Actor
     {

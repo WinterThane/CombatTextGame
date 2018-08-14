@@ -43,8 +43,8 @@ namespace CombatTextGUI
         private void PlayerMainStats_Loaded(object sender, RoutedEventArgs e)
         {
             Label text = GetLabel(sender);
-            text.Content = " Name: " + battle.PlayerName() + "\n";
-            text.Content += " Class: " + battle.PlayerClass() + "\n";
+            text.Content = " Name: " + Player.PlayerName() + "\n";
+            text.Content += " Class: " + Player.PlayerClass() + "\n";
             text.Content += " Level: 1\n";
             text.Content += " Experience: 0";
         }
@@ -52,11 +52,11 @@ namespace CombatTextGUI
         private void PlayerAttributes_Loaded(object sender, RoutedEventArgs e)
         {
             TextBlock text = GetTextBlock(sender);
-            text.Text = " Strength: " + battle.PlayerStrength() + "\n";
-            text.Text += " Intelligence: " + battle.PlayerIntelligence() + "\n";
-            text.Text += " Dexterity: " + battle.PlayerDexterity() + "\n";
-            text.Text += " Vitality: " + battle.PlayerVitality() + "\n";
-            text.Text += " Speed: " + battle.PlayerSpeed();
+            text.Text = " Strength: " + Player.PlayerStrength() + "\n";
+            text.Text += " Intelligence: " + Player.PlayerIntelligence() + "\n";
+            text.Text += " Dexterity: " + Player.PlayerDexterity() + "\n";
+            text.Text += " Vitality: " + Player.PlayerVitality() + "\n";
+            text.Text += " Speed: " + Player.PlayerSpeed();
         }
 
         private void PlayerAttackStats_Loaded(object sender, RoutedEventArgs e)

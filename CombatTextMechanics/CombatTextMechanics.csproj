@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,18 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actor.cs" />
     <Compile Include="Attack.cs" />
     <Compile Include="Battle.cs" />
+    <Compile Include="ClassesInit.cs" />
+    <Compile Include="Functions\StringFunctions.cs" />
+    <Compile Include="LoadJsonFunctions.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerInit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="Data\Classes\Classes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CombatTextModels\CombatTextModels.csproj">
-      <Project>{13af88a3-6626-4728-b06a-ec3323bc70ab}</Project>
-      <Name>CombatTextModels</Name>
-    </ProjectReference>
+    <Folder Include="Data\Enemies\" />
+    <Folder Include="Data\Locations\" />
+    <Folder Include="Data\Player\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
