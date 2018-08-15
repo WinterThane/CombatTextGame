@@ -51,11 +51,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TravelTexts.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Functions\SaveLoadJson.cs" />
     <Compile Include="Functions\StringFunctions.cs" />
-    <Compile Include="LoadJsonFunctions.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PlayerInit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +75,7 @@
     <EmbeddedResource Include="Data\Texts\TravelTexts.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TravelTexts.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

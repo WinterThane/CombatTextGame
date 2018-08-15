@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CombatTextMechanics.Functions;
 
 namespace CombatTextMechanics
 {
@@ -7,7 +8,7 @@ namespace CombatTextMechanics
         public List<Actor> GetClasses()
         {
             var result = new List<Actor>();
-            var classes = LoadJsonFunctions.GetAllClasses();
+            var classes = SaveLoadJson.GetAllClasses();
 
             foreach (var item in classes)
             {
@@ -24,7 +25,7 @@ namespace CombatTextMechanics
 
             foreach (var item in classes)
             {
-                result.Add(item.ClassName);
+                result.Add(item.CharacterClass);
             }
 
             return result;
@@ -37,7 +38,7 @@ namespace CombatTextMechanics
 
             foreach (var item in classes)
             {
-                if(item.ClassName == input)
+                if(item.CharacterClass == input)
                 {
                     result.Add("Strength", item.Strength.ToString());
                     result.Add("Intelligence", item.Intelligence.ToString());

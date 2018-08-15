@@ -11,6 +11,8 @@ namespace CombatTextGUI
 {
     public partial class Travel : Page
     {
+        private Player player = new Player();
+
         public Travel()
         {
             InitializeComponent();
@@ -43,8 +45,8 @@ namespace CombatTextGUI
         private void PlayerMainStats_Loaded(object sender, RoutedEventArgs e)
         {
             Label text = GetLabel(sender);
-            text.Content = " Name: " + Player.PlayerName() + "\n";
-            text.Content += " Class: " + Player.PlayerClass() + "\n";
+            text.Content = " Name: " + player.Name + "\n";
+            text.Content += " Class: " + player.CharacterClass + "\n";
             text.Content += " Level: 1\n";
             text.Content += " Experience: 0";
         }
@@ -52,11 +54,11 @@ namespace CombatTextGUI
         private void PlayerAttributes_Loaded(object sender, RoutedEventArgs e)
         {
             TextBlock text = GetTextBlock(sender);
-            text.Text = " Strength: " + Player.PlayerStrength() + "\n";
-            text.Text += " Intelligence: " + Player.PlayerIntelligence() + "\n";
-            text.Text += " Dexterity: " + Player.PlayerDexterity() + "\n";
-            text.Text += " Vitality: " + Player.PlayerVitality() + "\n";
-            text.Text += " Speed: " + Player.PlayerSpeed();
+            text.Text = " Strength: " + player.Strength + "\n";
+            text.Text += " Intelligence: " + player.Intelligence + "\n";
+            text.Text += " Dexterity: " + player.Dexterity + "\n";
+            text.Text += " Vitality: " + player.Vitality + "\n";
+            text.Text += " Speed: " + player.Speed;
         }
 
         private void PlayerAttackStats_Loaded(object sender, RoutedEventArgs e)

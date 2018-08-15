@@ -1,6 +1,6 @@
 ﻿[
   {
-    "ClassName": "Warrior",
+    "CharacterClass": "Warrior",
     "Strength": 1,
     "Intelligence": 1,
     "Dexterity": 1,
@@ -8,7 +8,7 @@
     "Speed": 1
   },
   {
-    "ClassName": "Knight",
+    "CharacterClass": "Knight",
     "Strength": 2,
     "Intelligence": 2,
     "Dexterity": 2,
@@ -16,7 +16,7 @@
     "Speed": 2
   },
   {
-    "ClassName": "Cavalier",
+    "CharacterClass": "Cavalier",
     "Strength": 3,
     "Intelligence": 3,
     "Dexterity": 3,
@@ -24,7 +24,7 @@
     "Speed": 3
   },
   {
-    "ClassName": "Berserker",
+    "CharacterClass": "Berserker",
     "Strength": 4,
     "Intelligence": 4,
     "Dexterity": 4,
@@ -32,7 +32,7 @@
     "Speed": 4
   },
   {
-    "ClassName": "Fencer",
+    "CharacterClass": "Fencer",
     "Strength": 5,
     "Intelligence": 5,
     "Dexterity": 5,
@@ -40,7 +40,7 @@
     "Speed": 5
   },
   {
-    "ClassName": "Samurai",
+    "CharacterClass": "Samurai",
     "Strength": 6,
     "Intelligence": 6,
     "Dexterity": 6,
@@ -49,7 +49,7 @@
   },
 
   {
-    "ClassName": "Monk",
+    "CharacterClass": "Monk",
     "Strength": 7,
     "Intelligence": 7,
     "Dexterity": 7,
@@ -58,7 +58,7 @@
   },
 
   {
-    "ClassName": "Archer",
+    "CharacterClass": "Archer",
     "Strength": 8,
     "Intelligence": 8,
     "Dexterity": 8,
@@ -67,7 +67,7 @@
   },
 
   {
-    "ClassName": "Warlord",
+    "CharacterClass": "Warlord",
     "Strength": 9,
     "Intelligence": 9,
     "Dexterity": 9,
@@ -75,7 +75,7 @@
     "Speed": 9
   },
   {
-    "ClassName": "Herald",
+    "CharacterClass": "Herald",
     "Strength": 10,
     "Intelligence": 10,
     "Dexterity": 10,
@@ -83,7 +83,7 @@
     "Speed": 10
   },
   {
-    "ClassName": "Inquisitor",
+    "CharacterClass": "Inquisitor",
     "Strength": 11,
     "Intelligence": 11,
     "Dexterity": 11,
@@ -91,7 +91,7 @@
     "Speed": 11
   },
   {
-    "ClassName": "Paladin",
+    "CharacterClass": "Paladin",
     "Strength": 12,
     "Intelligence": 12,
     "Dexterity": 12,
@@ -99,7 +99,7 @@
     "Speed": 12
   },
   {
-    "ClassName": "Marksman",
+    "CharacterClass": "Marksman",
     "Strength": 13,
     "Intelligence": 13,
     "Dexterity": 13,
@@ -107,7 +107,7 @@
     "Speed": 13
   },
   {
-    "ClassName": "Marauder",
+    "CharacterClass": "Marauder",
     "Strength": 14,
     "Intelligence": 14,
     "Dexterity": 14,
@@ -115,7 +115,7 @@
     "Speed": 14
   },
   {
-    "ClassName": "Templar",
+    "CharacterClass": "Templar",
     "Strength": 15,
     "Intelligence": 15,
     "Dexterity": 15,
@@ -123,7 +123,7 @@
     "Speed": 15
   },
   {
-    "ClassName": "Battlemage",
+    "CharacterClass": "Battlemage",
     "Strength": 16,
     "Intelligence": 16,
     "Dexterity": 16,
@@ -131,7 +131,7 @@
     "Speed": 16
   },
   {
-    "ClassName": "Assassin",
+    "CharacterClass": "Assassin",
     "Strength": 17,
     "Intelligence": 17,
     "Dexterity": 17,
@@ -139,7 +139,7 @@
     "Speed": 17
   },
   {
-    "ClassName": "Ranger",
+    "CharacterClass": "Ranger",
     "Strength": 18,
     "Intelligence": 18,
     "Dexterity": 18,
@@ -147,7 +147,7 @@
     "Speed": 18
   },
   {
-    "ClassName": "Ninja",
+    "CharacterClass": "Ninja",
     "Strength": 19,
     "Intelligence": 19,
     "Dexterity": 19,
@@ -155,7 +155,7 @@
     "Speed": 19
   },
   {
-    "ClassName": "Bard",
+    "CharacterClass": "Bard",
     "Strength": 20,
     "Intelligence": 20,
     "Dexterity": 20,
@@ -163,7 +163,7 @@
     "Speed": 20
   },
   {
-    "ClassName": "Cleric",
+    "CharacterClass": "Cleric",
     "Strength": 21,
     "Intelligence": 21,
     "Dexterity": 21,
@@ -171,7 +171,7 @@
     "Speed": 21
   },
   {
-    "ClassName": "Scout",
+    "CharacterClass": "Scout",
     "Strength": 22,
     "Intelligence": 22,
     "Dexterity": 22,
@@ -179,7 +179,7 @@
     "Speed": 22
   },
   {
-    "ClassName": "Hunter",
+    "CharacterClass": "Hunter",
     "Strength": 23,
     "Intelligence": 23,
     "Dexterity": 23,
@@ -187,7 +187,7 @@
     "Speed": 23
   },
   {
-    "ClassName": "Beastmaster",
+    "CharacterClass": "Beastmaster",
     "Strength": 24,
     "Intelligence": 24,
     "Dexterity": 24,
@@ -195,7 +195,7 @@
     "Speed": 24
   },
   {
-    "ClassName": "Strider",
+    "CharacterClass": "Strider",
     "Strength": 25,
     "Intelligence": 25,
     "Dexterity": 25,
@@ -203,7 +203,7 @@
     "Speed": 25
   },
   {
-    "ClassName": "Enchanter",
+    "CharacterClass": "Enchanter",
     "Strength": 26,
     "Intelligence": 26,
     "Dexterity": 26,
@@ -211,7 +211,7 @@
     "Speed": 26
   },
   {
-    "ClassName": "Summoner",
+    "CharacterClass": "Summoner",
     "Strength": 27,
     "Intelligence": 27,
     "Dexterity": 27,
@@ -219,7 +219,7 @@
     "Speed": 27
   },
   {
-    "ClassName": "Psion",
+    "CharacterClass": "Psion",
     "Strength": 28,
     "Intelligence": 28,
     "Dexterity": 28,
@@ -227,7 +227,7 @@
     "Speed": 28
   },
   {
-    "ClassName": "Elementalist",
+    "CharacterClass": "Elementalist",
     "Strength": 29,
     "Intelligence": 29,
     "Dexterity": 29,
@@ -235,7 +235,7 @@
     "Speed": 29
   },
   {
-    "ClassName": "Necromancer",
+    "CharacterClass": "Necromancer",
     "Strength": 30,
     "Intelligence": 30,
     "Dexterity": 30,
@@ -243,7 +243,7 @@
     "Speed": 30
   },
   {
-    "ClassName": "Druid",
+    "CharacterClass": "Druid",
     "Strength": 31,
     "Intelligence": 31,
     "Dexterity": 31,
@@ -251,7 +251,7 @@
     "Speed": 31
   },
   {
-    "ClassName": "Tinker",
+    "CharacterClass": "Tinker",
     "Strength": 32,
     "Intelligence": 32,
     "Dexterity": 32,
@@ -259,7 +259,7 @@
     "Speed": 32
   },
   {
-    "ClassName": "Geomancer",
+    "CharacterClass": "Geomancer",
     "Strength": 33,
     "Intelligence": 33,
     "Dexterity": 33,
@@ -267,7 +267,7 @@
     "Speed": 33
   },
   {
-    "ClassName": "Sage",
+    "CharacterClass": "Sage",
     "Strength": 34,
     "Intelligence": 34,
     "Dexterity": 34,
@@ -275,7 +275,7 @@
     "Speed": 34
   },
   {
-    "ClassName": "Warlock",
+    "CharacterClass": "Warlock",
     "Strength": 35,
     "Intelligence": 35,
     "Dexterity": 35,
@@ -283,7 +283,7 @@
     "Speed": 35
   },
   {
-    "ClassName": "Thief",
+    "CharacterClass": "Thief",
     "Strength": 36,
     "Intelligence": 36,
     "Dexterity": 36,
@@ -291,7 +291,7 @@
     "Speed": 36
   },
   {
-    "ClassName": "Magician",
+    "CharacterClass": "Magician",
     "Strength": 37,
     "Intelligence": 37,
     "Dexterity": 37,
@@ -299,7 +299,7 @@
     "Speed": 37
   },
   {
-    "ClassName": "Alchemist",
+    "CharacterClass": "Alchemist",
     "Strength": 38,
     "Intelligence": 38,
     "Dexterity": 38,
@@ -307,7 +307,7 @@
     "Speed": 38
   },
   {
-    "ClassName": "Shaman",
+    "CharacterClass": "Shaman",
     "Strength": 39,
     "Intelligence": 39,
     "Dexterity": 39,
@@ -315,7 +315,7 @@
     "Speed": 39
   },
   {
-    "ClassName": "Illusionist",
+    "CharacterClass": "Illusionist",
     "Strength": 40,
     "Intelligence": 40,
     "Dexterity": 40,
@@ -323,7 +323,7 @@
     "Speed": 40
   },
   {
-    "ClassName": "Seer",
+    "CharacterClass": "Seer",
     "Strength": 41,
     "Intelligence": 41,
     "Dexterity": 41,
@@ -331,7 +331,7 @@
     "Speed": 41
   },
   {
-    "ClassName": "Archanist",
+    "CharacterClass": "Archanist",
     "Strength": 42,
     "Intelligence": 42,
     "Dexterity": 42,
@@ -339,7 +339,7 @@
     "Speed": 42
   },
   {
-    "ClassName": "Witch",
+    "CharacterClass": "Witch",
     "Strength": 43,
     "Intelligence": 43,
     "Dexterity": 43,
@@ -347,7 +347,7 @@
     "Speed": 43
   },
   {
-    "ClassName": "Sorcerer",
+    "CharacterClass": "Sorcerer",
     "Strength": 44,
     "Intelligence": 44,
     "Dexterity": 44,
@@ -355,7 +355,7 @@
     "Speed": 44
   },
   {
-    "ClassName": "Wizard",
+    "CharacterClass": "Wizard",
     "Strength": 45,
     "Intelligence": 45,
     "Dexterity": 45,

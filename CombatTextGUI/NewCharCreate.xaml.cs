@@ -10,6 +10,7 @@ namespace CombatTextGUI
     public partial class NewCharCreate : Page
     {
         public ClassesInit classes = new ClassesInit();
+        public Player player = new Player();
         private int statPoints = 10;
 
         public NewCharCreate()
@@ -230,7 +231,15 @@ namespace CombatTextGUI
 
         private void CreateNewHero_Click(object sender, RoutedEventArgs e)
         {
-            //save to json
+            player.Name = NewHeroNameTB.Text;
+            player.CharacterClass = CharacterClassesCB.SelectedValue.ToString();
+            player.Strength = StringFunctions.StringToInteger(ClassStrengthTB.Text);
+            player.Intelligence = StringFunctions.StringToInteger(ClassIntelligenceTB.Text);
+            player.Dexterity = StringFunctions.StringToInteger(ClassDexterityTB.Text);
+            player.Vitality = StringFunctions.StringToInteger(ClassVitalityTB.Text);
+            player.Speed = StringFunctions.StringToInteger(ClassSpeedTB.Text);
+
+            SaveLoadJson.SaveNewHero(player);
             var nav = GetNavService();
             nav.Navigate(new Uri("Travel.xaml", UriKind.RelativeOrAbsolute));
         }

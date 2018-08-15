@@ -73,7 +73,7 @@
             </Grid.RowDefinitions>
 
             <Label Grid.Row="1" Grid.Column="0" Content="Hero name:" HorizontalContentAlignment="Right" />
-            <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource HeroNameTextBox}" />
+            <TextBox Name="NewHeroNameTB" Grid.Row="1" Grid.Column="1" Style="{StaticResource HeroNameTextBox}" />
 
             <Label Grid.Row="2" Grid.Column="0" Content="Choose a class:" HorizontalContentAlignment="Right" />
             <Grid Grid.Row="2" Grid.Column="1">
