@@ -1,4 +1,5 @@
 ﻿using CombatTextMechanics;
+using CombatTextMechanics.Functions;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,12 +11,11 @@ namespace CombatTextGUI
 {
     public partial class Travel : Page
     {
-        private Battle battle = new Battle();
-
         public Travel()
         {
             InitializeComponent();
             InitHealthManaBars();
+            TravelTextBox.Text = StringFunctions.GetIntro();
         }
 
         private void InitHealthManaBars()
@@ -116,6 +116,11 @@ namespace CombatTextGUI
         {
             var nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("MainMenu.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void RestButton_Click(object sender, RoutedEventArgs e)
+        {
+            TravelTextBox.Text += "You rest for few hours to replanish your health and mana ... Proper text will be displayed here\n";
         }
     }
 }

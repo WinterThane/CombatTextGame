@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Reflection;
+using System.Resources;
 
 namespace CombatTextMechanics.Functions
 {
     public static class StringFunctions
     {
+        private static ResourceManager rm = new ResourceManager("CombatTextMechanics.Data.Texts.TravelTexts", Assembly.GetExecutingAssembly());
+
         public static int StringToInteger(string input)
         {
             bool convert = Int32.TryParse(input, out int result);
@@ -30,6 +34,11 @@ namespace CombatTextMechanics.Functions
             var value = StringToInteger(input);
             value--;
             return value;
+        }
+
+        public static string GetIntro()
+        {
+            return rm.GetString("StartNewGame");
         }
     }
 }

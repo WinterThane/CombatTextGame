@@ -47,6 +47,11 @@
     <Compile Include="Attack.cs" />
     <Compile Include="Battle.cs" />
     <Compile Include="ClassesInit.cs" />
+    <Compile Include="Data\Texts\TravelTexts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravelTexts.resx</DependentUpon>
+    </Compile>
     <Compile Include="Functions\StringFunctions.cs" />
     <Compile Include="LoadJsonFunctions.cs" />
     <Compile Include="Player.cs" />
@@ -58,12 +63,19 @@
     <Content Include="Data\Classes\Classes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\Enemies\Enemies.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Enemies\" />
-    <Folder Include="Data\Locations\" />
     <Folder Include="Data\Player\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Texts\TravelTexts.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TravelTexts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,6 +18,9 @@
         <Style x:Key="AttributesValue" TargetType="TextBox">
             <Setter Property="TextAlignment" Value="Center" />
             <Setter Property="FontSize" Value="16" />
+            <Setter Property="IsReadOnly" Value="True" />
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="IsHitTestVisible" Value="False" />
         </Style>
         <Style x:Key="HeroNameTextBox" TargetType="TextBox">
             <Setter Property="Width" Value="150" />
@@ -39,6 +42,8 @@
             <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="Width" Value="20" />
             <Setter Property="Height" Value="25" />
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="IsEnabled" Value="False" />
         </Style>
     </Page.Resources>
 
@@ -53,7 +58,7 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
+
         <Button Content="Choose your portrait:" Grid.Row="0" Grid.Column="0" />
 
         <Grid Grid.Row="0" Grid.Column="1">
@@ -81,7 +86,7 @@
             </Grid>
         </Grid>
 
-            <StackPanel Grid.Row="0" Grid.Column="2">
+        <StackPanel Grid.Row="0" Grid.Column="2">
             <Grid Margin="0, 5, 30, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200" />
@@ -98,53 +103,55 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <TextBlock Text="Attributes" Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center"
-                           FontWeight="Bold" FontSize="20" />
+                <TextBlock Text="Attributes" Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" />
                 <TextBlock Text="Strength" Grid.Row="1" Grid.Column="0" Style="{StaticResource AttributesText}" />
                 <TextBlock Text="Intelligence" Grid.Row="2" Grid.Column="0" Style="{StaticResource AttributesText}" />
                 <TextBlock Text="Dexterity" Grid.Row="3" Grid.Column="0" Style="{StaticResource AttributesText}" />
                 <TextBlock Text="Vitality" Grid.Row="4" Grid.Column="0" Style="{StaticResource AttributesText}" />
                 <TextBlock Text="Speed" Grid.Row="5" Grid.Column="0" Style="{StaticResource AttributesText}" />
+                <TextBlock Text="Remaining points" Grid.Row="6" Grid.Column="0" Style="{StaticResource AttributesText}" />
 
-                <Button Content="+" Grid.Row="1" Grid.Column="1" Margin="3" 
+                <Button Content="+" Grid.Row="1" Grid.Column="1" Name="PlusStrength" 
                         Style="{StaticResource AttributesPlusMinus}" Click="PlusStrengthButton_Click" />
-                <Button Content="+" Grid.Row="2" Grid.Column="1" Margin="3" 
+                <Button Content="+" Grid.Row="2" Grid.Column="1" Name="PlusIntelligence" 
                         Style="{StaticResource AttributesPlusMinus}" Click="PlusIntelligenceButton_Click" />
-                <Button Content="+" Grid.Row="3" Grid.Column="1" Margin="3" 
+                <Button Content="+" Grid.Row="3" Grid.Column="1" Name="PlusDexterity" 
                         Style="{StaticResource AttributesPlusMinus}" Click="PlusDexterityButton_Click" />
-                <Button Content="+" Grid.Row="4" Grid.Column="1" Margin="3" 
+                <Button Content="+" Grid.Row="4" Grid.Column="1" Name="PlusVitality" 
                         Style="{StaticResource AttributesPlusMinus}" Click="PlusVitalityButton_Click" />
-                <Button Content="+" Grid.Row="5" Grid.Column="1" Margin="3" 
+                <Button Content="+" Grid.Row="5" Grid.Column="1" Name="PlusSpeed" 
                         Style="{StaticResource AttributesPlusMinus}" Click="PlusSpeedButton_Click" />
 
-                <TextBox Name="ClassStrengthTB" Grid.Row="1" Grid.Column="2" Margin="3" IsReadOnly="True" 
-                          Style="{StaticResource AttributesValue}" />
-                <TextBox Name="ClassIntelligenceTB" Grid.Row="2" Grid.Column="2" Margin="3" IsReadOnly="True" 
-                          Style="{StaticResource AttributesValue}" />
-                <TextBox Name="ClassDexterityTB" Grid.Row="3" Grid.Column="2" Margin="3" IsReadOnly="True" 
-                          Style="{StaticResource AttributesValue}" />
-                <TextBox Name="ClassVitalityTB" Grid.Row="4" Grid.Column="2" Margin="3" IsReadOnly="True" 
-                          Style="{StaticResource AttributesValue}" />
-                <TextBox Name="ClassSpeedTB" Grid.Row="5" Grid.Column="2" Margin="3" IsReadOnly="True" 
-                          Style="{StaticResource AttributesValue}" />
+                <TextBox Name="ClassStrengthTB" Grid.Row="1" Grid.Column="2" Style="{StaticResource AttributesValue}" />
+                <TextBox Name="ClassIntelligenceTB" Grid.Row="2" Grid.Column="2" Style="{StaticResource AttributesValue}" />
+                <TextBox Name="ClassDexterityTB" Grid.Row="3" Grid.Column="2" Style="{StaticResource AttributesValue}" />
+                <TextBox Name="ClassVitalityTB" Grid.Row="4" Grid.Column="2" Style="{StaticResource AttributesValue}" />
+                <TextBox Name="ClassSpeedTB" Grid.Row="5" Grid.Column="2" Style="{StaticResource AttributesValue}" />
+                <TextBox Name="StatPointsTB" Grid.Row="6" Grid.Column="2" Style="{StaticResource AttributesValue}" />
 
-                <Button Content="-" Grid.Row="1" Grid.Column="3" Margin="3" 
+                <Button Content="-" Grid.Row="1" Grid.Column="3" Name="MinusStrength" 
                         Style="{StaticResource AttributesPlusMinus}" Click="MinusStrengthButton_Click" />
-                <Button Content="-" Grid.Row="2" Grid.Column="3" Margin="3" 
+                <Button Content="-" Grid.Row="2" Grid.Column="3" Name="MinusIntelligence" 
                         Style="{StaticResource AttributesPlusMinus}" Click="MinusIntelligenceButton_Click" />
-                <Button Content="-" Grid.Row="3" Grid.Column="3" Margin="3" 
+                <Button Content="-" Grid.Row="3" Grid.Column="3" Name="MinusDexterity" 
                         Style="{StaticResource AttributesPlusMinus}" Click="MinusDexterityButton_Click" />
-                <Button Content="-" Grid.Row="4" Grid.Column="3" Margin="3" 
+                <Button Content="-" Grid.Row="4" Grid.Column="3" Name="MinusVitality" 
                         Style="{StaticResource AttributesPlusMinus}" Click="MinusVitalityButton_Click" />
-                <Button Content="-" Grid.Row="5" Grid.Column="3" Margin="3" 
+                <Button Content="-" Grid.Row="5" Grid.Column="3" Name="MinusSpeed" 
                         Style="{StaticResource AttributesPlusMinus}" Click="MinusSpeedButton_Click" />
             </Grid>
         </StackPanel>
-        
+
         <Button Content="art and exit button" Grid.Row="1" Grid.RowSpan="2" />
-        <Button Content="combat stats" Grid.Row="1" Grid.Column="1" />
-        <Button Content="resists" Grid.Row="1" Grid.Column="2" />
-        <Button Content="class flavor text" Grid.Row="2" Grid.Column="1" />
-        <Button Content="class specific skill and create button" Grid.Row="2" Grid.Column="2" />
+        <Button Content="combat stats" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+        <Button Content="class specific skill" Grid.Row="2" Grid.Column="1" />
+
+        <DockPanel Grid.Row="2" Grid.Column="2">
+            <TextBlock Text="Pros and cons of the class or some background / flavor text" DockPanel.Dock="Top" />
+            <Button Content="Create Character" Click="CreateNewHero_Click"
+                    Width="150" Height="30" FontWeight="Bold" FontSize="16"
+                    Margin="10" DockPanel.Dock="Left" 
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+        </DockPanel>
     </Grid>
 </Page>

@@ -9,6 +9,30 @@
       Background="LightGray"
       Title="Travel">
 
+    <Page.Resources>
+        <Style x:Key="WalkButton" TargetType="Button">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="3" />
+        </Style>
+        <Style x:Key="SkillCircles" TargetType="Ellipse">
+            <Setter Property="Width" Value="15" />
+            <Setter Property="Height" Value="15" />
+            <Setter Property="Stroke" Value="Black" />
+            <Setter Property="StrokeThickness" Value="1" />
+            <Setter Property="Margin" Value="0, 0, 3, 0" />
+            <Setter Property="Fill" Value="White" />
+        </Style>
+        <Style x:Key="HealthManaBar" TargetType="Rectangle">
+            <Setter Property="Width" Value="200" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Stroke" Value="Black" />
+            <Setter Property="StrokeThickness" Value="2" />
+            <Setter Property="Fill" Value="DarkGray" />
+            <Setter Property="Margin" Value="0, 2, 0, 0" />
+        </Style>
+    </Page.Resources>
+    
     <Grid>
         <DockPanel LastChildFill="False">
 
@@ -16,8 +40,8 @@
                     DockPanel.Dock="Bottom" 
                     Height="30" Width="100" 
                     HorizontalAlignment="Right" 
-                    Margin="5" 
-                    FontSize="16" 
+                    Margin="10" 
+                    FontSize="14" 
                     FontWeight="Bold"
                     Click="MainMenuButton_Click"/>
 
@@ -29,23 +53,23 @@
                        Loaded="PlayerImage_Loaded" />
 
                 <!--health bar-->
-                <Rectangle Width="200" Height="25" Stroke="Black" StrokeThickness="2" Fill="DarkGray" Margin="0, 2, 0, 0" />
+                <Rectangle Style="{StaticResource HealthManaBar}" />
                 <Rectangle Name="PlayerLife" HorizontalAlignment="Left" Margin="7, -25, 0, 0" />
                 <TextBlock Name="PlayerLifeText" Text="Health: 80 / 100" Foreground="White" FontSize="14" Margin="10, -23, 0, 0" />
                 <!--mana bar-->
-                <Rectangle Width="200" Height="25" Stroke="Black" StrokeThickness="2" Fill="DarkGray" Margin="0, 2, 0, 0" />
+                <Rectangle Style="{StaticResource HealthManaBar}" />
                 <Rectangle Name="PlayerMana" HorizontalAlignment="Left" Margin="7, -25, 0, 0" />
                 <TextBlock Name="PlayerManaText" Text="Mana: 50 / 80" Foreground="White" FontSize="14" Margin="10, -23, 0, 0" />
 
                 <StackPanel Orientation="Horizontal" Width="Auto">
                     <Label Content="Skill points: " />
-                    <Ellipse Name="SkillPoint1" Width="15" Height="15" Fill="Gold" Stroke="Black" StrokeThickness="1" Margin="0,0,3,0" />
-                    <Ellipse Name="SkillPoint2" Width="15" Height="15" Fill="Gold" Stroke="Black" StrokeThickness="1" Margin="0,0,3,0" />
-                    <Ellipse Name="SkillPoint3" Width="15" Height="15" Fill="White" Stroke="Black" StrokeThickness="1" Margin="0,0,3,0" />
-                    <Ellipse Name="SkillPoint4" Width="15" Height="15" Fill="White" Stroke="Black" StrokeThickness="1" Margin="0,0,3,0" />
-                    <Ellipse Name="SkillPoint5" Width="15" Height="15" Fill="White" Stroke="Black" StrokeThickness="1" Margin="0,0,3,0" />
-                    <Ellipse Name="SkillPoint6" Width="15" Height="15" Fill="White" Stroke="Black" StrokeThickness="1" Margin="0,0,3,0" />
-                    <Ellipse Name="SkillPoint7" Width="15" Height="15" Fill="White" Stroke="Black" StrokeThickness="1" Margin="0,0,3,0" />
+                    <Ellipse Name="SkillPoint1" Style="{StaticResource SkillCircles}" Fill="Gold" />
+                    <Ellipse Name="SkillPoint2" Style="{StaticResource SkillCircles}" Fill="Gold" />
+                    <Ellipse Name="SkillPoint3" Style="{StaticResource SkillCircles}" />
+                    <Ellipse Name="SkillPoint4" Style="{StaticResource SkillCircles}" />
+                    <Ellipse Name="SkillPoint5" Style="{StaticResource SkillCircles}" />
+                    <Ellipse Name="SkillPoint6" Style="{StaticResource SkillCircles}" />
+                    <Ellipse Name="SkillPoint7" Style="{StaticResource SkillCircles}" />
                 </StackPanel>
 
                 <!--player stats-->
@@ -89,11 +113,16 @@
                     <RowDefinition MinHeight="50" />
                     <RowDefinition MinHeight="50" />
                 </Grid.RowDefinitions>
-                <Button Content="&#x1f845;  Walk North  &#x1f845;" Grid.Row="0" Grid.Column="1" Margin="3" Click="NorthButton_Click" />
-                <Button Content="&#x1f844;  Walk West" Grid.Row="1" Grid.Column="0" Margin="3" Click="WestButton_Click" />
-                <Button Content="&#x1F525;  Rest  &#x1F525;" Grid.Row="1" Grid.Column="1" Margin="3" Width="130" Height="30" FontWeight="Bold" />
-                <Button Content="Walk East  &#x1f846;" Grid.Row="1" Grid.Column="2" Margin="3" Click="EastButton_Click" />
-                <Button Content="&#x1f847;  Walk South  &#x1f847;" Grid.Row="2" Grid.Column="1" Margin="3" Click="SouthButton_Click" />
+                <Button Content="&#x1f845;  Walk North  &#x1f845;" Grid.Row="0" Grid.Column="1" 
+                        Style="{StaticResource WalkButton}" Click="NorthButton_Click" />
+                <Button Content="&#x1f844;  Walk West" Grid.Row="1" Grid.Column="0" 
+                        Style="{StaticResource WalkButton}" Click="WestButton_Click" />
+                <Button Content="&#x1F525;  Rest  &#x1F525;" Grid.Row="1" Grid.Column="1" Margin="3" 
+                        Width="130" Height="30" FontWeight="Bold" Click="RestButton_Click"  />
+                <Button Content="Walk East  &#x1f846;" Grid.Row="1" Grid.Column="2" 
+                        Style="{StaticResource WalkButton}" Click="EastButton_Click" />
+                <Button Content="&#x1f847;  Walk South  &#x1f847;" Grid.Row="2" Grid.Column="1" 
+                        Style="{StaticResource WalkButton}" Click="SouthButton_Click" />
             </Grid>
 
         </DockPanel>
