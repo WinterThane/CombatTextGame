@@ -240,6 +240,8 @@ namespace CombatTextGUI
             player.Speed = StringFunctions.StringToInteger(ClassSpeedTB.Text);
 
             SaveLoadJson.SaveNewHero(player);
+            Application.Current.Properties["PageData"] = player.Name;
+
             var nav = GetNavService();
             nav.Navigate(new Uri("Travel.xaml", UriKind.RelativeOrAbsolute));
         }

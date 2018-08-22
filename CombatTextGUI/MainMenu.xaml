@@ -26,7 +26,7 @@
                     HorizontalAlignment="Center">
 
             <Button Content="Start New Game" Style="{StaticResource MainMenuButtons}" Click="NewGameBtn_Click" />
-            <Button Content="Load Game" Style="{StaticResource MainMenuButtons}" Click="TravelBtn_Click" />
+            <Button Content="Load Game" Style="{StaticResource MainMenuButtons}" Click="LoadGameBtn_Click" />
             <Button Content="Credits" Style="{StaticResource MainMenuButtons}" IsEnabled="False" />
             <Button Content="Combat" Style="{StaticResource MainMenuButtons}" Click="CombatBtn_Click" />
             <Button Content="Exit" Style="{StaticResource MainMenuButtons}" Click="ExitBtn_Click" />

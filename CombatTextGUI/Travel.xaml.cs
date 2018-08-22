@@ -18,6 +18,12 @@ namespace CombatTextGUI
             InitializeComponent();
             InitHealthManaBars();
             TravelTextBox.Text = StringFunctions.GetIntro();
+            InitPlayer();
+        }
+
+        private void InitPlayer()
+        {
+            player = SaveLoadJson.LoadHero(Application.Current.Properties["PageData"].ToString());
         }
 
         private void InitHealthManaBars()

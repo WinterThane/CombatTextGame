@@ -23,10 +23,10 @@ namespace CombatTextGUI
             nav.Navigate(new Uri("NewCharCreate.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void TravelBtn_Click(object sender, RoutedEventArgs e)
+        private void LoadGameBtn_Click(object sender, RoutedEventArgs e)
         {
             var nav = GetNavService();
-            nav.Navigate(new Uri("Travel.xaml", UriKind.RelativeOrAbsolute));
+            nav.Navigate(new Uri("LoadGame.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void CombatBtn_Click(object sender, RoutedEventArgs e)
